@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee List</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+  <h1>Tecgate International Pvt. Ltd.</h1>
+  <h2>Employee List</h2>
+  <form id="employeeForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name" required>
+    
+    <label for="contact">Contact Number:</label>
+    <input type="text" id="contact" placeholder="Enter contact number" required>
+    
+    <label for="nic">NIC:</label>
+    <input type="text" id="nic" placeholder="Enter NIC" required>
+    
+    <button type="button" onclick="addEmployee()">Add Employee</button>
+  </form>
+
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Name</th>
+        <th>Contact Number</th>
+        <th>NIC</th>
+        <th>Company</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <button id="generateExcel" onclick="generateExcel()">Generate Excel Sheet</button>
+
+  <!-- Include SheetJS library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+  <script src="scripts.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
